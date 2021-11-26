@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
     <title>tramite</title>
 </head>
 <body>
+
     <!-- MENU RESPONSIVO -->
     <nav class='nav_principal'>
         <div class='contenedor max'>
@@ -20,7 +22,7 @@
                     <li class='list_item'> <a href="./FUTVIRTUAL.php">FUT VIRTUAL</a> </li>
                     <li class='list_item'> <a href="#">CONSULTAR FUT </a></li>
                 </ul>
-                <button class='btn_login'>Iniciar sesion</button>
+              <!-- <a href="index.html"> <button class='btn_login'>Iniciar sesion</button></a>-->
             </div>
         </div>
     </nav>
@@ -30,22 +32,22 @@
     <header class='header'>
         <div class='header_conteiner'>
             <h1 class='header_title'> sistema de trámite documentario <span class='header_title--efect'>UNJFSC</span></h1>
-            <form class='header_login-contenedor' method="post" action=''>
+            <form class='header_login-contenedor' method="post" action='p_login.php'>
                 <div class="contenedor_usuario label_container--efect">
-                    <input type="email" class="contenedor_usuario-input" id="usuario" placeholder="USUARIO" name="correousuario">
+                    <input type="email" class="contenedor_usuario-input" id="emaillocal" placeholder="USUARIO" name="txtusu">
                 </div>
 
                 <div class="contenedor_usuario label_container--efect">
-                    <input type="password" class="contenedor_usuario-input" id="usuario" placeholder="PASSWORD" name='passusuario'>
+                    <input type="password" class="contenedor_usuario-input" id="usuario" placeholder="PASSWORD" name="txtpass">
                 </div>
                 <button id='btn_sesion' type="submit" class='btn_loginI'>
-                    <div class='btn_login--efect'>
+                    <div onclick="guardar()" class='btn_login--efect'>
                         Iniciar sesion
                     </div>
                 </button>
             </form>
         </div>
     </header>
-
+<script src="js/local.js"></script>
 </body>
 </html>

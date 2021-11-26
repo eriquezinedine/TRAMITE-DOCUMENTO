@@ -20,7 +20,36 @@
                     <li class='list_item'> <a href="#">FUT VIRTUAL</a> </li>
                     <li class='list_item'> <a href="#">CONSULTAR FUT </a></li>
                 </ul>
-                <button class='btn_login'>Iniciar sesion</button>
+                
+                
+                <?php               
+                
+                    if (isset( $_COOKIE["usuario"])) {
+                    ?>
+
+                    <?php 
+                    echo "Hola, ".$_COOKIE["usuario"]."&nbsp";
+                    ?>
+
+                    <script>
+                    window.onload = function(){killerSession();}
+                    function killerSession(){
+                    setTimeout("window.open('cerrarsesion.php','_top');",14401000);
+                    }
+                    </script>
+                    <a href="cerrarsesion.php"> <button  class='btn_login'>Cerrar Sesion</button></a>
+                   
+                    <?php 
+
+                }else  {
+                    ?>
+
+                    <a href="index.html"> <button class='btn_login'>Iniciar sesion</button></a>
+
+                   <?php    
+                }
+
+                ?>
             </div>
         </div>
     </nav>
