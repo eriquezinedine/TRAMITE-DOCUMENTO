@@ -14,10 +14,10 @@
     <!-- MENU RESPONSIVO -->
     <nav class='nav_principal'>
         <div class='contenedor max'>
-            <h3 class='title'><a href="./index.php">UNJSC</a></h3>
+            <h3 class='title'><a href="https://unjfsc.edu.pe/" target="_blank" >UNJSC</a></h3>
             <div class='nav_contenedor'>
                 <ul class='nav_principal--menu'>
-                    <li class='list_item'> <a href="./FUTVIRTUAL.php">FUT VIRTUAL</a></li>
+                    <li class='list_item'> <a href="./index.php">FUT VIRTUAL</a></li>
                     <li class='list_item'> <a href="./consultar.php">CONSULTAR FUT </a></li>
                     <li class='list_item'> <a href="#">ADMINISTRATOR</a></li> </a></li>
                 </ul>
@@ -45,7 +45,7 @@
                 }else  {
                     ?>
 
-                    <a href="index.html"> <button class='btn_login'>Iniciar sesion</button></a>
+                    <a href="Login.php"> <button class='btn_login'>Iniciar sesion</button></a>
 
                    <?php    
                 }

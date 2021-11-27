@@ -26,7 +26,7 @@ $valor=$r["correousuario"];
 				$_SESSION["auth"]=1;
 	setcookie("usuario", $valor, time()+14400000);
 
-		header('location: FUTVIRTUAL.php');
+		header('location: index.php');
 	}
 	
  ?>
