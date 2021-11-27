@@ -13,13 +13,14 @@ $color4: #D0F0D6;
 
 @for $i from 1 to 10 {
     .col-#{$i}0{
-        width: $i * 9.99%
+        width: $i * 9.99% !important;
     }
 }
 
-* input{
+* input,textarea{
     outline: none;
     border: none;
+    width: 100%;
 }
 
 
@@ -57,6 +58,8 @@ body{
 }
 
 .nav_principal{
+    position: fixed;
+    z-index: 10;
     background-color: $color1;
     // position: fixed;
     width: 100%;
@@ -78,38 +81,31 @@ body{
     }
 }
 
-.nav_contenedor{
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 10px 5px;
-    & .nav_principal--menu{
-        .list_item{
-            display: inline-block;
-            a{
-                color: $background;
-                font-style: none;
-                text-decoration: none;
+// .nav_contenedor{
+//     & .nav_principal--menu{
+//         .list_item{
+//             display: inline-block;
+//             a{
+//                 color: $background;
+//                 font-style: none;
+//                 text-decoration: none;
                 
-            }
-            margin: 10px;
-        }
-    }
-    .btn_login{
-        margin-left: 60px;
-        background-color: $color2;
-        border: none;
-        color: $background;
-        padding: 5px 15px;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-}
+//             }
+//             margin: 10px;
+//         }
+//     }
+//     .btn_login{
+//         margin-left: 60px;
+//         background-color: $color2;
+//         border: none;
+//         color: $background;
+//         padding: 5px 15px;
+//         font-weight: bold;
+//         font-size: 20px;
+//         border-radius: 10px;
+//         cursor: pointer;
+//     }
+// }
 
 
 
@@ -190,11 +186,14 @@ body{
 #fromFut{
     width: 80%;
     margin: 0 auto;
+    position: relative;
+    top: 47px;
     display: flex;
     flex-direction: column;
     .contenedor_datos{
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         .fut_contenedor{
             // background-color:#23233C;
         }
@@ -204,6 +203,34 @@ body{
 .btn_fut{
     margin: 20px 0px;
 }
+
+/**/
+.fut_contenedor_imput{
+    * select{
+        width: 100%;
+    }
+}
+
+.content_datos1{
+    // width: 90%;
+    .fut_contenedor_imput{
+        width: 49%;
+    }
+    .fut_contenedor_imput:nth-child(3){
+        width: 100%;
+    }
+}
+
+.content_datos2{
+    .fut_contenedor_imput{
+        width: 49%;
+    }
+}
+
+
+
+/***/
+
 
 
 .title_fut{
@@ -216,24 +243,39 @@ body{
     }
 }
 
+@mixin animated{
+    font-weight: 900;
+    transform: translate3d(10px, 28px, 0px);
+    font-size: 20px;
+    color: $color1;
+    position: relative;
+    z-index: 2;
+}
+
+
 .fut_contenedor_imput{
     // background-color:#6CC57C;
+    width: 100%;
     display: inline-block;
     font-size: 14px;
     border-radius: 15px;
     padding: 5px 15px;
     box-shadow: 20px 20px 30px rgba(171, 182, 204, 0.56);
     margin: 22px 0px;
+
     label{
-        color: #7F8DA0;
+        font-size:13px;
+        transition: all 0.35s ease-in-out;
         font-weight: normal;
+        color: $color3;
     }
 
     .fut_elemento_input{
         color: $color1;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
         background-color: transparent;
+        outline: none;
     }
     .fut_elemento{
         display: block;
@@ -262,5 +304,247 @@ body{
         }
     }
     
+    #fromFut{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        .contenedor_datos{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .fut_contenedor{
+                width: 45%;
+                // background-color:#23233C;
+            }
+        }
+    }
+    
+    .btn_fut{
+        margin: 20px 0px;
+    }
+    
+    /**/
+    
+    .content_datos1{
+        // width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .fut_contenedor_imput{
+            width: 30% !important;
+            margin: 22px 5px;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        }
+    }
+    
+    .content_datos2{
+        display: flex;
+        justify-content: space-between;
+        .fut_contenedor_imput:nth-child(1){
+            width: 30%;
+        }
+        .fut_contenedor_imput:nth-child(2){
+            width: 65%;
+        }
+    }
+    
+    
+    
+    /***/
 }
 
+/**MENU RESPONSIVO*/
+
+/*EFECTO JAVASCRIPT*/
+
+.nav_contenedor.desplegar{
+    left: 0px !important;
+}
+
+
+#rotate.dis-block{
+    display: block;
+}
+
+
+.efect-rotate{
+    position: relative;
+}
+
+.efect-rotate div{
+    position: absolute;
+    top: 19px;
+    margin: 0px;
+    left: 11.5px;
+    transition: all  0.4s ease-in-out;
+}
+
+.efect-rotate div:nth-child(2){
+    display: none;
+}
+
+.efect-rotate div:first-child{
+    transform:rotate(45deg)
+}
+
+.efect-rotate div:last-child{
+    transform:rotate(-45deg)
+}
+
+
+
+/*///////////////////*/
+
+
+
+.nav_contenedor{
+    z-index: 100;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+    left: -100%;
+    top: 57.6px;
+    width: 80%;
+    height: calc(100vh - 57.6px);
+        color: white;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        list-style: none;
+        background-color: $color1;
+        a{
+            width: 100%;
+        }
+
+        & .nav_principal--menu{
+            width: 100%;
+            .list_item{
+                padding: 20px 0px;
+                width: 100%;
+                display: block;
+                cursor: pointer;
+                transition: all 0.35s ease-in-out;
+                border-bottom: 5px solid $color2;
+                &:hover{
+                    background-color: $color2;
+                }
+                a{
+                    color: $background;
+                    font-style: none;
+                    text-decoration: none;
+                }
+            }
+        }
+        .btn_login{
+            width: 100%;
+            padding: 20px 0px;
+            background-color: $color2;
+            border: none;
+            color: $background;
+            // padding: 5px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+}
+
+
+
+.nav-movil__menu{
+    display: block;
+    .content-line{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius:15px;
+        background-color: $color2;
+        .content-line__background{
+            width: 28px;
+            .content-item{
+                width: 28px;
+                margin: 4px 0px;
+                height: 2.5px;
+                background-color:$background;
+            }
+        }
+    }
+    
+}
+
+@media(min-width: 700px){
+    .nav_contenedor{
+        color: white;
+        position: sticky;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        background-color: $color1;
+        padding: 10px 5px;
+        height: 100%;
+        left: 0px;
+        a{
+            width: 26%;
+        }
+    }
+    .nav_contenedor{
+        & .nav_principal--menu{
+            display: flex;
+            justify-content: flex-end;
+            .list_item{
+                padding: 10px;
+                margin-right: 5px;
+                width: initial;
+                display: inline-block;
+                a{
+                    color: $background;
+                    font-style: none;
+                    text-decoration: none;
+                }
+            }
+        }
+        .btn_login{
+            margin-left: 60px;
+            background-color: $color2;
+            border: none;
+            color: $background;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    
+
+    .nav-movil__menu{
+        display: none;
+        .content-line{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius:15px;
+            background-color: $color2;
+            .content-line__background{
+                width: 28px;
+                .content-item{
+                    width: 28px;
+                    margin: 4px 0px;
+                    height: 2.5px;
+                    background-color:$background;
+                }
+            }
+        }
+    }
+}
