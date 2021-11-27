@@ -31,9 +31,10 @@ include("conexion.php");
 
 
 $sql ="INSERT INTO fut VALUES ('$codfut','$password',$tipopersona,$dependencia,'$apaterno','$amaterno','$nombres','$nrodocumento','$celular','$correo','$fundamento','$titulo_solicitud','NO HAY RUTA','$fecha')";
-
+$sql1 = "insert into expediente values('$codfut',1,1)";
 
 mysqli_query($cn, $sql);
+mysqli_query($cn, $sql1);
 // echo $sql;
 echo "N°Documento: $codfut,  Passwor: $password  ";
 
