@@ -15,7 +15,6 @@ let fecha = `${hoy.getFullYear()}-${hoy.getMonth()}-${hoy.getDate()}`;
 let codfut ='';
 let passfut ='';
 
-
 btn_fut.addEventListener('click', async (e)=>{
     e.preventDefault();
     codfut =hoy.getFullYear()+`-${getRandomInt(0,1001)}`
@@ -25,7 +24,7 @@ btn_fut.addEventListener('click', async (e)=>{
             formulario.append('codfut',codfut);
             // formulario.append('id',intid);
             e.preventDefault(); //evito la recarga por defecto del formulario
-            let resp = await fetch("http://localhost/TRAMITE-DOCUMENTO/optener.php",{
+            let resp = await fetch("http://localhost/tramite/TRAMITE-DOCUMENTO/optener.php",{
                 method:'POST',
                 body: formulario
             })

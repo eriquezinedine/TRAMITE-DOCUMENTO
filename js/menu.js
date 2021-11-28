@@ -32,3 +32,7 @@ const remover_e =()=>{
 element_list.forEach(element => {
     element.addEventListener('click', select_e)
 });
+
+window.addEventListener('change',()=>{
+    console.log(window);
+} )
