@@ -20,7 +20,7 @@
                 <ul class='nav_principal--menu'>
                     <li class='list_item'> <a href="./index.php">FUT VIRTUAL</a></li>
                     <li class='list_item'> <a href="./consultar.php">CONSULTAR FUT </a></li>
-                    <li class='list_item'> <a href="#">ADMINISTRATOR</a></li> </a></li>
+                    <li class='list_item'> <a href="./administrar.php">ADMINISTRATOR</a></li> </a></li>
                 </ul>
                 
                 

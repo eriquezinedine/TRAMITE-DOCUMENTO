@@ -86,11 +86,11 @@
         </div>
     </button>
 </form>
-<form action="p_archivo.php" method='post' enctype="multipart/form-data">
-    <div class="fut_contenedor_imput" style="width: 40%;">
+<form id="contenedorArchivo" action="p_archivo.php" method='post' enctype="multipart/form-data">
+    <div class="fut_contenedor_imput" >
         <label class='fut_elemento' for="ruta">ESCOJA SU ARCHIVO</label>
         <input class='fut_elemento fut_elemento_input' type="file" id="ruta" name="archivo">
-        <input type="submit" value="Procesar Archivo">
+        <input class='btn_archivo' type="submit" value="Procesar Archivo">
 
     </div>
 </form>

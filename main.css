@@ -193,7 +193,7 @@ body {
 }
 
 .btn_loginI {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 90%;
   width: 405px;
   height: 59.6px;
@@ -816,5 +816,80 @@ body {
 #boton_salir a {
   color: #F2F6FF;
   text-decoration: none;
+}
+
+#contenedorArchivo {
+  position: absolute;
+  right: 222px;
+  width: 500px;
+  bottom: 150px;
+}
+
+#contenedorArchivo .fut_contenedor_imput {
+  width: 113%;
+}
+
+#contenedorArchivo .fut_contenedor_imput .btn_archivo {
+  height: 40px;
+  cursor: pointer;
+  background-color: #6CC57C;
+  color: #F2F6FF;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+#contenedorArchivo .fut_contenedor_imput .btn_archivo:hover {
+  background-color: #23233C;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #6CC57C;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.contendor_top {
+  position: relative;
+  top: 150px;
+}
+
+.table_contenedor table {
+  margin: 0px auto;
 }
 /*# sourceMappingURL=main.css.map */
