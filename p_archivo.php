@@ -8,7 +8,7 @@ $ruta = $_FILES["archivo"]["tmp_name"];
 list($na, $e) = explode(".", $nombre);
 
 if (isset($_COOKIE["codfut"])) {
-    $destino = "bd/" . $_COOKIE["codfut"] . ".pdf";
+    $destino = "archivo/" . $_COOKIE["codfut"] . ".pdf";
     if ($e == "pdf") {
         if ($nombre != "") {
             if (move_uploaded_file($_FILES["archivo"]["tmp_name"], $destino)) {
