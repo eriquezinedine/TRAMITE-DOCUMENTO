@@ -1,3 +1,6 @@
+///////////////ADVERTENCIA DEJAR COMENTANDO ///////////////
+
+
 // let fromFut =document.getElementById('fromFut')
 // let btn_fut = document.getElementById('btn_fut')
 // let intpuFile = document.getElementById('ruta');
