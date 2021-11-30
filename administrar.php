@@ -15,6 +15,7 @@
                     <th scope="col">Titulo</th>
                     <th scope="col">Fundamento</th>
                     <th scope="col">Descargar</th>
+                    <th scope="col">Leer</th>
                     <th scope="col">Enviar</th>
                 </tr>
             </thead>
@@ -57,12 +58,13 @@
                     <td scope="row" ><?php echo $titulo_solicitud; ?></td>
                     <td scope="row" ><?php echo $fundamento; ?></td>
                     <td scope="row" >
-                        <a href=<?php echo "'./$ruta;'" ?> download=<?php echo $apaterno?> >por php</a>
+                        <a href=<?php echo "'./$ruta'" ?> download=<?php echo $apaterno?> >Descargar Pdf</a>
                     </td>
-                    <td scope="row" >
-                        <a href='./archivo/2021-5fj.pdf' download=<?php echo $apaterno?> >Descargar</a>
-                    </td>
-                    <td><button>Enviar</button></td>
+
+                    <td scope="row"><a href="p_estado.php?valor=<?php echo $r["codfut"]; ?>" target="top">
+                    <img src="Img/pdf-icon.png" width="40px" height="50px"></a>Leer</td>
+                    <td scope="row"><a href="p_estado2.php?valor=<?php echo $r["codfut"]; ?>" target="top">
+                    <img src="Img/pdf-icon.png" width="40px" height="50px"></a>Enviar</td>
                 </tr>
             <?php
             }

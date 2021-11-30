@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,50 +10,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.js"></script>
     <title>tramite</title>
 </head>
+
 <body>
     <!-- MENU RESPONSIVO -->
     <nav class='nav_principal'>
         <div class='contenedor max'>
-            <h3 class='title'><a href="https://unjfsc.edu.pe/" target="_blank" >UNJSC</a></h3>
+            <h3 class='title'><a href="https://unjfsc.edu.pe/" target="_blank">UNJSC</a></h3>
             <div class='nav_contenedor'>
                 <ul class='nav_principal--menu'>
                     <li class='list_item'> <a href="./index.php">FUT VIRTUAL</a></li>
                     <li class='list_item'> <a href="./consultar.php">CONSULTAR FUT </a></li>
-                    <li class='list_item'> <a href="./administrar.php">ADMINISTRATOR</a></li> </a></li>
-                </ul>
-                
-                
-                <?php               
-                
-                    if (isset( $_COOKIE["usuario"])) {
+
+                    <?php
+
+                    if (isset($_COOKIE["usuario"])) {
                     ?>
 
-                    <?php 
-                    echo "Hola, ".$_COOKIE["usuario"]."&nbsp";
+                        <li class='list_item'> <a href="./administrar.php">ADMINISTRADOR</a></li> </a>
+
+
+
+                    <?php
+
+                    }
+                    ?>
+
+                    </li>
+                </ul>
+
+
+                <?php
+
+                if (isset($_COOKIE["usuario"])) {
+                ?>
+
+                    <?php
+                    echo "Hola, " . $_COOKIE["usuario"] . "&nbsp";
                     ?>
 
                     <script>
-                    window.onload = function(){killerSession();}
-                    function killerSession(){
-                    setTimeout("window.open('cerrarsesion.php','_top');",14401000);
-                    }
-                    </script>
-                    <a href="cerrarsesion.php"> <button  class='btn_login'>Cerrar Sesion</button></a>
-                   
-                    <?php 
+                        window.onload = function() {
+                            killerSession();
+                        }
 
-                }else  {
-                    ?>
+                        function killerSession() {
+                            setTimeout("window.open('cerrarsesion.php','_top');", 14401000);
+                        }
+                    </script>
+                    <a href="cerrarsesion.php"> <button class='btn_login'>Cerrar Sesion</button></a>
+
+                <?php
+
+                } else {
+                ?>
 
                     <a href="Login.php"> <button class='btn_login'>Iniciar sesion</button></a>
 
-                   <?php    
+                <?php
                 }
 
                 ?>
-                
+
             </div>
             <div class="nav-movil__menu">
                 <div id="rotate" class="content-line">
@@ -64,5 +87,5 @@
                 </div>
             </div>
         </div>
-        
+
     </nav>

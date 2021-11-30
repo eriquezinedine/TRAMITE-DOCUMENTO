@@ -88,8 +88,8 @@
 </form>
 <form id="contenedorArchivo" action="p_archivo.php" method='post' enctype="multipart/form-data">
     <div class="fut_contenedor_imput" >
-        <label class='fut_elemento' for="ruta">ESCOJA SU ARCHIVO</label>
-        <input class='fut_elemento fut_elemento_input' type="file" id="ruta" name="archivo">
+        <label class='fut_elemento'  for="ruta">ESCOJA SU ARCHIVO</label>
+        <input class='fut_elemento fut_elemento_input'style="margin: 4%;" type="file" id="ruta" name="archivo">
         <input class='btn_archivo' type="submit" value="Procesar Archivo">
 
     </div>
