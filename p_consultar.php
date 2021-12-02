@@ -29,6 +29,8 @@ $fundamento = $r["fundamento"];
 $titulo_solicitud = $r["titulo_solicitud"];
 $ruta = $r["ruta"];
 $fecha = $r["fecha"];
+$fechar = $r["dater"];
+$fechaf = $r["datef"];
 $id_estado = $r["id_estado"];
 $codusuario = $r["codusuario"];
 $nombreestado = $r["nombreestado"];
@@ -139,12 +141,12 @@ $nombredependencia = $r["nombredependencia"];
                 <input class='fut_elemento fut_elemento_input' type="text" id="fecha" name='fecha' value='<?php echo $fecha; ?>' disabled>
             </div>
             <div class="fut_contenedor_imput">
-                <label class='fut_elemento' for="nrodocumento">DNI/DOCUMENTO</label>
-                <input class='fut_elemento fut_elemento_input' type="text" id="nrodocumento" name='nrodocumento' value='<?php echo $nrodocumento; ?>' disabled>
+                <label class='fut_elemento' for="fecha">FECHA RECIVIDA</label>
+                <input class='fut_elemento fut_elemento_input' type="text" id="fecha" name='fecha' value='<?php echo $fechar; ?>' disabled>
             </div>
             <div class="fut_contenedor_imput">
-                <label class='fut_elemento' for="celular">CELULAR </label>
-                <input class='fut_elemento fut_elemento_input' type="tel" id="celular" name='celular' value='<?php echo $celular; ?>' disabled>
+                <label class='fut_elemento' for="fecha">FECHA FINALIZADO</label>
+                <input class='fut_elemento fut_elemento_input' type="text" id="fecha" name='fecha' value='<?php echo $fechaf; ?>' disabled>
             </div>
             <div class="fut_contenedor_imput">
                 <label class='fut_elemento' for="correo">CORREO </label>
