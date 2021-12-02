@@ -20,10 +20,11 @@
 include("conexion.php");
 
 $valor = $_GET["valor"];
+$fe=date("Y-m-d H:i:s");
 
 
 $sql = "update expediente
-     	       set id_estado=3
+     	       set id_estado=3,datef='$fe'
      	       where codfut='$valor'";
 
 mysqli_query($cn, $sql);;
