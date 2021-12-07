@@ -78,18 +78,18 @@
                 <label class='fut_elemento' for="fundamento">FUNDAMENTO</label>
                 <textarea class='fut_elemento fut_elemento_input' rows='' col='100' id="fundamento" name='fundamento'></textarea>
             </div>
+            <button id='btn_fut' type="submit" class='btn_loginI m_auto'>
+                <div class='btn_login--efect'>
+                    Enviar Informacion
+                </div>
+            </button>
         </div>
     </div>
-    <button id='btn_fut' type="submit" class='btn_loginI m_auto'>
-        <div class='btn_login--efect'>
-            Enviar Informacion
-        </div>
-    </button>
 </form>
 <form id="contenedorArchivo" action="p_archivo.php" method='post' enctype="multipart/form-data">
     <div class="fut_contenedor_imput" >
         <label class='fut_elemento'  for="ruta">ESCOJA SU ARCHIVO</label>
-        <input class='fut_elemento fut_elemento_input'style="margin: 4%;" type="file" id="ruta" name="archivo">
+        <input class='fut_elemento fut_elemento_input'style="margin: 4px;" type="file" id="ruta" name="archivo">
         <input class='btn_archivo' type="submit" value="Procesar Archivo">
 
     </div>

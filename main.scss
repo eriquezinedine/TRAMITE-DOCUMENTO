@@ -733,10 +733,12 @@ body{
 }
 
 #contenedorArchivo{
-    position: absolute;
-    right: 222px;
-    width: 500px;
-    bottom: 150px;
+    width: 80%;
+    margin: 0px auto;
+    // position: absolute;
+    // right: 222px;
+    // width: 500px;
+    // bottom: 150px;
     .fut_contenedor_imput{
         width: 110%;
         .btn_archivo{
