@@ -52,7 +52,7 @@
                 $nombreestado = $r["nombreestado"];
                 $nombredependencia = $r["nombredependencia"];
             ?>
-                <tr style='text-align:center;' >
+                <tr style='text-align:center;'  >
                     <td scope="row" ><?php echo $nombres; ?></td>
                     <td scope="row" ><?php echo "$apaterno $amaterno"; ?></td>
                     <td scope="row" ><?php echo $nrodocumento; ?></td>
