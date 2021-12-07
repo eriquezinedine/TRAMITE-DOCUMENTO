@@ -47,7 +47,7 @@ include("conexion.php");
 
 
 $sql = "INSERT INTO fut VALUES ('$codfut','$password',$tipopersona,$dependencia,'$apaterno','$amaterno','$nombres','$nrodocumento','$celular','$correo','$fundamento','$titulo_solicitud','NO HAY RUTA','$fecha')";
-$sql1 = "insert into expediente values('$codfut',1,1)";
+$sql1 = "insert into expediente(codfut,id_estado,codusuario) values('$codfut',1,1)";
 setcookie("codfut", $codfut);
 
 mysqli_query($cn, $sql);

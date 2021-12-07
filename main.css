@@ -821,9 +821,9 @@ body {
 
 #contenedorArchivo {
   position: absolute;
-  right: 222px;
+  right: 430px;
   width: 500px;
-  bottom: 150px;
+  bottom: -162px;
 }
 
 #contenedorArchivo .fut_contenedor_imput {
