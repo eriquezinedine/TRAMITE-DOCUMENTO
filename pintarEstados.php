@@ -3,9 +3,10 @@
 <div class='contendor_top'>
     
 
-<h3 class='title_fut'>ADMINISTRAR <span class='title--efect'>MEZA DE PARTO</span></h3>
+<h3 class='title_fut'>FINALIZAR <span class='title--efect'>SOLICITUD</span></h3>
     <div class='table_contenedor'>
-    <button class='btn_admin'>Adminsitrar</button>
+            <button type='submit' class='btn_admin'> <a href="./administrar.php">Regresar</a></button>
+
             <table class="styled-table">
             <thead>
                 <tr style='text-align:center;'>
@@ -17,8 +18,7 @@
                     <th scope="col">Estado del FUT</th>
                     <th scope="col">Fundamento</th>
                     <th scope="col">Descargar</th>
-                    <th scope="col">Leer</th>
-                    <th scope="col">Enviar</th>
+                    <th scope="col">Confirmar Solicitud</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +51,8 @@
                 $codusuario = $r["codusuario"];
                 $nombreestado = $r["nombreestado"];
                 $nombredependencia = $r["nombredependencia"];
+
+                if($nombreestado !='ENTREGADO'){
             ?>
                 <tr style='text-align:center;'  >
                     <td scope="row" ><?php echo $nombres; ?></td>
@@ -63,50 +65,21 @@
                     <td scope="row" >
                         <a  class='ico_descargar' href=<?php echo "'./$ruta'" ?> download=<?php echo $apaterno?> ><i class="fas fa-file-download"></i></a>
                     </td>
-
-                    <td scope="row"><a class='ico_descargar' href="p_estado.php?valor=<?php echo $r["codfut"]; ?>" target="top"><i class="fas fa-book-reader"></i></a>
-                    </td>
                     <td scope="row">
+                        <?php if($nombreestado =='FINALIZADO'){?>
+                            <a class='ico_descargar' target="top"><i class="fas fa-paper-plane"></i></a>
+                        <?php
+                     }else{
+                     ?>
                         <a class='ico_descargar' href="p_estado2.php?valor=<?php echo $r["codfut"]; ?>" target="top"><i class="fas fa-paper-plane"></i></a>
+                    <?php }?>
                     </td>
                 </tr>
             <?php
-            }
+            }}
             ?>
             </tbody>
         </table>
     </div>
 </div>
-
-<form method="POST" action='./pintarEstados' id='admin_despliegue' class='contenedorDetalle'>
-    <article class='detalle_container'>
-        <div class='detalle_container_title'>
-            <h1 class='detalle_title'> Administrar Dependencia</h1>
-        </div>
-        <div class='detalle_container_datos'>
-            <div class="fut_contenedor_imput">
-                <label class='fut_elemento' for="dependencia">DEPENDENCIA </label>
-                <select class='fut_elemento fut_elemento_input' name="dependencia" id="dependencia" style='width:100%'>
-                    <option selected>seleciona</option>
-                    <?php
-                    include("conexion.php");
-                    $sqlp = 'select * from dependencia';
-                    $fila = mysqli_query($cn, $sqlp);
-                    while ($r = mysqli_fetch_array($fila)) {
-                    ?>
-                        <option value="<?php echo $r['id_dependencia']; ?>"><?php echo $r["nombredependencia"]; ?></option>
-                    <?php
-                    }
-                    ?>
-                </select>
-            </div>
-        </div>
-        <div class='detalle_icono'>
-            <i class="fas fa-times"></i>
-        </div>
-        <button type='submit' class='btn_admin' style='width:80%; margin-left: 45px;'>Adminsitrar</button>
-    </article>
-</form>
-
-
 <?php include('./footer.php')?>

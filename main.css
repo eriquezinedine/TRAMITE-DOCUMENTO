@@ -820,15 +820,8 @@ body {
 }
 
 #contenedorArchivo {
-<<<<<<< HEAD
   width: 80%;
   margin: 0px auto;
-=======
-  position: absolute;
-  right: 430px;
-  width: 500px;
-  bottom: -162px;
->>>>>>> 7c8efeee298ea8c15720acb590ed665ad9b96a7b
 }
 
 #contenedorArchivo .fut_contenedor_imput {
@@ -928,6 +921,11 @@ body {
   outline: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.btn_admin a {
+  text-decoration: none;
+  color: #F2F6FF;
 }
 
 .btn_admin:hover {

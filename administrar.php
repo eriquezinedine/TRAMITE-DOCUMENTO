@@ -3,7 +3,7 @@
 <div class='contendor_top'>
     
 
-<h3 class='title_fut'>ADMINISTRAR <span class='title--efect'>MEZA DE PARTO</span></h3>
+<h3 class='title_fut'>ADMINISTRAR <span class='title--efect'>MEZA DE PARTE</span></h3>
     <div class='table_contenedor'>
     <button class='btn_admin'>Adminsitrar</button>
             <table class="styled-table">
@@ -12,13 +12,12 @@
                     <th scope="col">Nombres</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">DNI</th>
-                    <th scope="col">Destino</th>
-                    <th scope="col">Titulo</th>
+                    <th class='ocultar' scope="col">Destino</th>
+                    <th class='ocultar' scope="col">Titulo</th>
                     <th scope="col">Estado del FUT</th>
-                    <th scope="col">Fundamento</th>
-                    <th scope="col">Descargar</th>
-                    <th scope="col">Leer</th>
-                    <th scope="col">Enviar</th>
+                    <th class='ocultar' scope="col">Fundamento</th>
+                    <th class='ocultar' scope="col">Descargar</th>
+                    <th class='ocultar' scope="col">Confirmar</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,22 +51,26 @@
                 $nombreestado = $r["nombreestado"];
                 $nombredependencia = $r["nombredependencia"];
             ?>
-                <tr style='text-align:center;'  >
+                <tr id='table_efecto' style='text-align:center;'  >
                     <td scope="row" ><?php echo $nombres; ?></td>
                     <td scope="row" ><?php echo "$apaterno $amaterno"; ?></td>
                     <td scope="row" ><?php echo $nrodocumento; ?></td>
-                    <td scope="row" ><?php echo $nombredependencia; ?></td>
-                    <td scope="row" ><?php echo $titulo_solicitud; ?></td>
+                    <td class='ocultar' scope="row" ><?php echo $nombredependencia; ?></td>
+                    <td class='ocultar' scope="row" ><?php echo $titulo_solicitud; ?></td>
                     <td scope="row" class='estado_pintar'><?php echo $nombreestado; ?></td>
-                    <td scope="row" > <textarea name="" id="" cols="30" rows="4" disabled><?php echo $fundamento; ?></textarea></td>
-                    <td scope="row" >
+                    <td class='ocultar' scope="row" > <textarea name="" id="" cols="30" rows="4" disabled><?php echo $fundamento; ?></textarea></td>
+                    <td class='ocultar' scope="row" >
                         <a  class='ico_descargar' href=<?php echo "'./$ruta'" ?> download=<?php echo $apaterno?> ><i class="fas fa-file-download"></i></a>
                     </td>
 
-                    <td scope="row"><a class='ico_descargar' href="p_estado.php?valor=<?php echo $r["codfut"]; ?>" target="top"><i class="fas fa-book-reader"></i></a>
-                    </td>
-                    <td scope="row">
-                        <a class='ico_descargar' href="p_estado2.php?valor=<?php echo $r["codfut"]; ?>" target="top"><i class="fas fa-paper-plane"></i></a>
+                    <td class='ocultar' scope="row">
+                    <?php if($nombreestado =='FINALIZADO' || $nombreestado =='RECIBIDO'){?>
+                            <a class='ico_descargar' target="top"><i class="fas fa-paper-plane"></i></a>
+                        <?php
+                     }else{
+                     ?>
+                        <a class='ico_descargar' href="p_estado.php?valor=<?php echo $r["codfut"]; ?>" target="top"><i class="fas fa-paper-plane"></i></a>
+                    <?php }?>
                     </td>
                 </tr>
             <?php

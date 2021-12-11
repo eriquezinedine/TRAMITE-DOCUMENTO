@@ -6,11 +6,11 @@ btn_admin.addEventListener('click', ()=>{
     admin_despliegue.classList.toggle('efect')
 })
 
-detalle_icono.addEventListener('click', ()=>{admin_despliegue.classList.toggle('efect')})
+// detalle_icono.addEventListener('click', ()=>{admin_despliegue.classList.toggle('efect')})
 
-setTimeout(() => {
+// setTimeout(() => {
 
-}, 500);
+// }, 500);
 
 const estado_pintar = document.querySelectorAll('.estado_pintar');
 console.log(estado_pintar)
@@ -25,7 +25,9 @@ estado_pintar.forEach(element=>{
             break;
 
         case 'FINALIZADO':
-            element.parentElement.style.background='#8A1625 !important'
+            element.parentElement.style.background='#8A1625'
+            element.parentElement.style.color= '#F2F6FF'
+            element.parentElement.children[7].children[0].style.color= '#F2F6FF'
             break;
     
         default:
@@ -33,3 +35,5 @@ estado_pintar.forEach(element=>{
             break;
     }
 })
+
+console.log('hola aqui estamos aaa;x')
